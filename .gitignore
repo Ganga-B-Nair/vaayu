@@ -1,0 +1,20 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+.DS_Store
+
+# Source CSVs are NOT redistributed -- 220MB for station_hour alone, well over
+# GitHub's 100MB file limit. The README says where to download them.
+data/raw/*.csv
+
+# Keep the processed artefacts: they are small, and committing them means the
+# dashboard runs on a fresh clone without re-running the pipeline.
+!data/processed/*.csv
+!data/processed/*.json
+!data/processed/*.parquet
+
+.streamlit/secrets.toml

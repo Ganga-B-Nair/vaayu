@@ -1,0 +1,86 @@
+{
+  "quality": {
+    "rows": 29531,
+    "cities": 26,
+    "date_min": "2015-01-01",
+    "date_max": "2020-07-01",
+    "pm25_exceeds_pm10": 256,
+    "aqi_above_scale_max": 543,
+    "aqi_observed_max": 2049.0,
+    "pm10_at_1000_ceiling": 1,
+    "pm25_at_1000_ceiling": 0,
+    "aqi_missing_pct": 15.9,
+    "pm25_missing_pct": 15.6
+  },
+  "cleaning": {
+    "pm_inversion_nulled": 256,
+    "aqi_over_scale_nulled": 543,
+    "dropped_columns": [
+      "Xylene"
+    ]
+  },
+  "features": {
+    "cities_kept": 19,
+    "cities_dropped": 7,
+    "dropped": [
+      "Ahmedabad",
+      "Brajrajnagar",
+      "Jorapokhar",
+      "Mumbai",
+      "Patna",
+      "Shillong",
+      "Talcher"
+    ],
+    "min_coverage": 0.8
+  },
+  "split": {
+    "train_end": "2018-12-31",
+    "test_end": "2020-03-24",
+    "n_train": 10276,
+    "n_test": 6386,
+    "advisory_rate_train": 0.2682,
+    "advisory_rate_test": 0.1652,
+    "n_features": 59
+  },
+  "models": {
+    "persistence": {
+      "accuracy": 0.9314,
+      "precision": 0.7913,
+      "recall": 0.7943,
+      "f1": 0.7928,
+      "tn": 5110,
+      "fp": 221,
+      "fn": 217,
+      "tp": 838,
+      "missed_alerts": 217,
+      "false_alarms": 221
+    },
+    "logistic": {
+      "accuracy": 0.9407,
+      "precision": 0.7645,
+      "recall": 0.9261,
+      "f1": 0.8375,
+      "roc_auc": 0.9825,
+      "tn": 5030,
+      "fp": 301,
+      "fn": 78,
+      "tp": 977,
+      "missed_alerts": 78,
+      "false_alarms": 301
+    },
+    "xgboost": {
+      "accuracy": 0.95,
+      "precision": 0.8211,
+      "recall": 0.8919,
+      "f1": 0.8551,
+      "roc_auc": 0.9826,
+      "tn": 5126,
+      "fp": 205,
+      "fn": 114,
+      "tp": 941,
+      "missed_alerts": 114,
+      "false_alarms": 205
+    }
+  },
+  "advisory_threshold": 200
+}
